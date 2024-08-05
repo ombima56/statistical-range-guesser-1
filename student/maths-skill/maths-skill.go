@@ -36,7 +36,7 @@ func StandardDeviation(data []float64) float64 {
 func CalculateRange(data []float64) (float64, float64) {
 	mean := Average(data)
 	stdDev := StandardDeviation(data)
-	lowerLimit := mean - stdDev*2
-	upperLimit := mean + stdDev*2
+	lowerLimit := mean - 3*stdDev
+	upperLimit := mean + 3*stdDev
 	return lowerLimit, upperLimit
 }
